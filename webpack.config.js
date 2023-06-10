@@ -23,17 +23,17 @@ module.exports = {
       },
       {
         test: /\.html$/,
+        use: {
+          loader: "html-loader",
+        },
+      },
+      {
+        test:/\.s[ac]ss$/i,
         use: [
           "style-loader",
           "css-loader",
           "sass-loader",
         ]
-      },
-      {
-        test:/\.s[ac]ss$/i,
-        use: {
-          loader: ""
-        }
       }
     ],
   },
@@ -41,9 +41,6 @@ module.exports = {
     new HtmlWebpackPlugin({
       template: "./public/index.html",
       filename: "./index.html",
-    }),
-    new MiniCssExtractPlugin({
-      filename: "[name].css"
     }),
   ],
   devServer: {
