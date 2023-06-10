@@ -11,7 +11,7 @@ const Login = () => {
         <p className="subtitle">Enter a new password for your account</p>
 
         <form action="/" className="form">
-          <label for="password" className="label">
+          <label htmlFor="password" className="label">
             Password
           </label>
           <input
@@ -20,7 +20,7 @@ const Login = () => {
             placeholder="*********"
             className="input input-password"
           />
-          <label for="new-password" className="label">
+          <label htmlFor="new-password" className="label">
             Password
           </label>
           <input
