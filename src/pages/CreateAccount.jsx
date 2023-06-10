@@ -1,30 +1,46 @@
 import React from "react";
 import "../styles/MyAccount.scss";
 
-const MyAccount = () => {
+const CreateAccount = () => {
   return (
     <div className="login">
       <div className="form-container">
         <h1 className="title">My account</h1>
+
         <form action="/" className="form">
           <div>
             <label htmlFor="name" className="label">
               Name
             </label>
-            <p className="value">Camila Yokoo</p>
+            <input
+              type="text"
+              id="name"
+              placeholder="Name"
+              className="input input-name"
+            />
             <label htmlFor="email" className="label">
               Email
             </label>
-            <p className="value">camilayokoo@gmail.com</p>
+            <input
+              type="text"
+              id="email"
+              placeholder="platzi@example.com"
+              className="input input-email"
+            />
             <label htmlFor="password" className="label">
               Password
             </label>
-            <p className="value">*********</p>
+            <input
+              type="password"
+              id="password"
+              placeholder="*********"
+              className="input input-password"
+            />
           </div>
           <input
             type="submit"
-            value="Edit"
-            className="secondary-button login-button"
+            value="Create"
+            className="primary-button login-button"
           />
         </form>
       </div>
@@ -32,4 +48,4 @@ const MyAccount = () => {
   );
 };
 
-export default MyAccount;
+export default CreateAccount;
